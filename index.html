@@ -9,11 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
   <link href="style.css" rel="stylesheet"/>
+  <style>
+    /* Mobile Compact Optimizations */
+    @media (max-width: 767.98px) {
+      :root { font-size: 14px; }
+      .navbar-brand .nav-title { font-size: 1.1rem; }
+      .navbar-brand .nav-sub { font-size: 0.75rem; }
+      .hero { padding-top: 100px; padding-bottom: 40px; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .hero-stats-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; justify-items: center; }
+      .stat-pill { width: 100%; margin: 0 !important; }
+      .sec-title { font-size: 1.8rem; }
+      .mass-card { padding: 1rem 0.5rem; }
+      .mass-icon-ring { width: 40px; height: 40px; line-height: 40px; font-size: 1rem; }
+      .feast-main { height: 300px; }
+      .about-img-box { height: 250px; }
+      section { padding: 3rem 0; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg py-2">
   <div class="container">
     <a class="navbar-brand text-decoration-none" href="#">
       <div class="nav-brand-wrap">
@@ -55,7 +73,7 @@
         <div class="hero-btns">
           <a href="#mass" class="btn-primary-gold"><i class="fas fa-church"></i> Mass Timings</a>
           <a href="#feast" class="btn-outline-navy"><i class="fas fa-star"></i> Feast &amp; Events</a>
-          <a href="#contact" class="btn-outline-gold"><i class="fas fa-praying-hands"></i> Prayer Request</a>
+          <a href="#contact" class="btn-outline-gold d-none d-sm-inline-flex"><i class="fas fa-praying-hands"></i> Prayer Request</a>
         </div>
         <div class="hero-stats-row">
           <div class="stat-pill"><div class="stat-num">1580</div><div class="stat-lbl">Founded</div></div>
@@ -87,7 +105,7 @@
       </p>
     </div>
 
-    <div class="row align-items-center justify-content-center g-4">
+    <div class="row align-items-center justify-content-center g-3 g-lg-4">
 
       <!-- Virgin Mary -->
       <div class="col-md-4 reveal d1">
@@ -183,17 +201,17 @@
 <!-- MASS TIMINGS -->
 <section class="mass-section" id="mass">
   <div class="container" style="position:relative;z-index:1;">
-    <div class="text-center mb-5 reveal">
+    <div class="text-center mb-4 mb-lg-5 reveal">
       <div class="sec-tag" style="justify-content:center;"><span>Holy Mass Schedule</span></div>
       <h2 class="sec-title light">Join Us for the Eucharist</h2>
       <div class="gold-line center"></div>
       <p style="color:rgba(255,255,255,0.5);max-width:420px;margin:0 auto;font-size:0.9rem;">All are warmly welcome to join us in prayer, worship, and fellowship.</p>
     </div>
-    <div class="row g-4">
-      <div class="col-sm-6 col-lg-3 reveal d1"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-sun"></i></div><div class="mass-day-title">Sunday</div><span class="time-chip">6:00 AM</span><span class="time-chip">8:30 AM</span><span class="time-chip">5:30 PM</span><p class="mass-note-lt">Holy Mass</p></div></div>
-      <div class="col-sm-6 col-lg-3 reveal d2"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-calendar-day"></i></div><div class="mass-day-title">Mon – Fri</div><span class="time-chip">6:30 AM</span><span class="time-chip">5:30 PM</span><p class="mass-note-lt">Daily Mass</p></div></div>
-      <div class="col-sm-6 col-lg-3 reveal d3"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-praying-hands"></i></div><div class="mass-day-title">Saturday</div><span class="time-chip">6:30 AM</span><span class="time-chip">4:30 PM</span><p class="mass-note-lt">11:00 AM (2nd Sat)</p></div></div>
-      <div class="col-sm-6 col-lg-3 reveal d4"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-clock"></i></div><div class="mass-day-title">Open Hours</div><span class="time-chip">5:00 AM</span><span class="time-chip">8:00 PM</span><p class="mass-note-lt">Daily for private prayer</p></div></div>
+    <div class="row g-2 g-lg-4">
+      <div class="col-6 col-lg-3 reveal d1"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-sun"></i></div><div class="mass-day-title">Sunday</div><span class="time-chip">6:00 AM</span><span class="time-chip">8:30 AM</span><span class="time-chip">5:30 PM</span><p class="mass-note-lt">Holy Mass</p></div></div>
+      <div class="col-6 col-lg-3 reveal d2"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-calendar-day"></i></div><div class="mass-day-title">Mon – Fri</div><span class="time-chip">6:30 AM</span><span class="time-chip">5:30 PM</span><p class="mass-note-lt">Daily Mass</p></div></div>
+      <div class="col-6 col-lg-3 reveal d3"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-praying-hands"></i></div><div class="mass-day-title">Saturday</div><span class="time-chip">6:30 AM</span><span class="time-chip">4:30 PM</span><p class="mass-note-lt">11:00 AM (2nd Sat)</p></div></div>
+      <div class="col-6 col-lg-3 reveal d4"><div class="mass-card"><div class="mass-icon-ring"><i class="fas fa-clock"></i></div><div class="mass-day-title">Open Hours</div><span class="time-chip">5:00 AM</span><span class="time-chip">8:00 PM</span><p class="mass-note-lt">Daily for private prayer</p></div></div>
     </div>
     <div class="text-center mt-5 reveal">
       <a href="liturgy.html" class="btn-primary-gold me-3"><i class="fas fa-calendar-alt"></i> Full Liturgical Calendar</a>
@@ -210,7 +228,7 @@
       <h2 class="sec-title">Thumpoly Perunnal</h2>
       <div class="gold-line center"></div>
     </div>
-    <div class="row g-4 align-items-stretch">
+    <div class="row g-3 g-lg-4 align-items-stretch">
       <div class="col-lg-7 reveal">
         <div class="feast-main" style="background: linear-gradient(180deg, rgba(30,58,82,0.3) 0%, rgba(30,58,82,0.95) 100%), url('assets/image/thumpoly_feast.jpg') no-repeat center center; background-size: cover;">
           <div class="feast-pattern"></div>
@@ -247,7 +265,7 @@
       <h2 class="sec-title">Serve. Grow. Belong.</h2>
       <div class="gold-line center"></div>
     </div>
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-2 g-lg-4">
       <div class="col reveal d1"><div class="min-card"><div class="min-icon"><i class="fas fa-users"></i></div><div class="min-title">Family Ministry</div><p class="min-desc">Strengthening families through faith, prayer, and mutual support.</p><a href="#" class="min-link">Learn More <i class="fas fa-arrow-right"></i></a></div></div>
       <div class="col reveal d2"><div class="min-card"><div class="min-icon"><i class="fas fa-music"></i></div><div class="min-title">Parish Choir</div><p class="min-desc">Uplifting worship through devotional music and sacred song.</p><a href="#" class="min-link">Learn More <i class="fas fa-arrow-right"></i></a></div></div>
       <div class="col reveal d3"><div class="min-card"><div class="min-icon"><i class="fas fa-book"></i></div><div class="min-title">Catechism</div><p class="min-desc">Faith formation and religious education for children and youth.</p><a href="#" class="min-link">Learn More <i class="fas fa-arrow-right"></i></a></div></div>
